@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: "Landing pages e sites institucionais para negócios que querem construir uma presença digital profissional.",
     images: ["/og.png"],
   },
-  icons: { icon: "/images/logo-mark.webp", shortcut: "/images/logo-mark.webp" },
+  icons: { icon: "/favicon-jh.png", shortcut: "/favicon-jh.png" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
