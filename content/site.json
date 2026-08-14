@@ -1,0 +1,125 @@
+{
+  "brand": {
+    "name": "jhenrique.dev",
+    "owner": "José Henrique",
+    "role": "Desenvolvedor Full Stack"
+  },
+  "hero": {
+    "eyebrow": "DESENVOLVIMENTO WEB / PRODUTOS DIGITAIS",
+    "title": "Presença digital com clareza, performance e propósito.",
+    "description": "Landing pages e sites institucionais para negócios que querem construir uma presença digital profissional.",
+    "primaryCta": "Solicitar orçamento",
+    "secondaryCta": "Conhecer serviços"
+  },
+  "services": [
+    {
+      "eyebrow": "01 / CONVERSÃO",
+      "title": "Landing pages",
+      "description": "Páginas objetivas para apresentar uma oferta, gerar confiança e transformar visitas em oportunidades.",
+      "tag": "Foco em resultado",
+      "symbol": "<>"
+    },
+    {
+      "eyebrow": "02 / PRESENÇA",
+      "title": "Sites institucionais",
+      "description": "Uma base profissional para explicar o que sua empresa faz e facilitar o contato com seus clientes.",
+      "tag": "Clareza que comunica",
+      "symbol": "◈"
+    },
+    {
+      "eyebrow": "03 / NEGÓCIO",
+      "title": "E-commerce",
+      "description": "Experiências de compra organizadas, responsivas e preparadas para acompanhar o crescimento da operação.",
+      "tag": "Estrutura para vender",
+      "symbol": "↗"
+    },
+    {
+      "eyebrow": "04 / ESCALA",
+      "title": "Produtos SaaS",
+      "description": "Interfaces e experiências digitais pensadas para produtos que precisam evoluir com consistência.",
+      "tag": "Pronto para crescer",
+      "symbol": "✦"
+    }
+  ],
+  "benefits": [
+    "Uma primeira impressão profissional",
+    "Experiência consistente em qualquer tela",
+    "Carregamento rápido e estrutura preparada para SEO",
+    "Caminhos claros para o cliente entrar em contato"
+  ],
+  "portfolio": [
+    {
+      "category": "NOVO PROJETO",
+      "title": "Seu projeto pode aparecer aqui",
+      "description": "A seção já está preparada para receber seus próximos trabalhos.",
+      "symbol": "01"
+    },
+    {
+      "category": "ESTUDO EM BREVE",
+      "title": "Ideias digitais em construção",
+      "description": "Novos conceitos serão publicados conforme o portfólio crescer.",
+      "symbol": "02"
+    },
+    {
+      "category": "CASE EM BREVE",
+      "title": "Resultados para acompanhar",
+      "description": "Uma vitrine para mostrar projetos, decisões e aprendizados.",
+      "symbol": "03"
+    }
+  ],
+  "about": {
+    "eyebrow": "SOBRE JOSÉ HENRIQUE",
+    "title": "Tecnologia com intenção, do primeiro contato ao produto final.",
+    "description": "Sou desenvolvedor Full Stack, atuante na área de desenvolvimento web. Meu trabalho combina visão de produto, cuidado com a experiência e código consistente para criar soluções digitais funcionais e profissionais.",
+    "note": "Disponível para conexões, ideias e novos projetos web."
+  },
+  "process": [
+    {
+      "number": "01",
+      "title": "Conversa inicial",
+      "description": "Entendemos seu negócio, objetivo e o que precisa ser comunicado."
+    },
+    {
+      "number": "02",
+      "title": "Definição do projeto",
+      "description": "Organizamos escopo, conteúdo, prioridades e direção visual."
+    },
+    {
+      "number": "03",
+      "title": "Desenvolvimento",
+      "description": "Transformamos a ideia em uma experiência rápida e responsiva."
+    },
+    {
+      "number": "04",
+      "title": "Revisão e entrega",
+      "description": "Ajustamos os detalhes e deixamos tudo preparado para o próximo passo."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Quanto tempo leva para criar um site?",
+      "answer": "O prazo depende do escopo, conteúdo e quantidade de páginas. Depois da conversa inicial, o projeto recebe uma estimativa específica."
+    },
+    {
+      "question": "O site funciona em celulares?",
+      "answer": "Sim. A experiência é construída de forma responsiva, com atenção especial para leitura, navegação e chamadas para ação em telas menores."
+    },
+    {
+      "question": "Domínio e hospedagem estão inclusos?",
+      "answer": "Esses detalhes podem ser definidos conforme o projeto. A estrutura fica preparada para publicação em serviços modernos de hospedagem."
+    },
+    {
+      "question": "Posso solicitar alterações?",
+      "answer": "Sim. O processo inclui uma etapa de revisão para alinhar o resultado aos objetivos combinados."
+    },
+    {
+      "question": "Você faz manutenção depois da entrega?",
+      "answer": "Podemos combinar manutenção e evolução contínua conforme a necessidade do negócio."
+    }
+  ],
+  "contact": {
+    "eyebrow": "VAMOS CONVERSAR",
+    "title": "Uma boa presença digital começa com uma boa conversa.",
+    "description": "Os canais de contato serão adicionados em breve. Enquanto isso, a estrutura do site já está pronta para receber seus dados e novos projetos."
+  }
+}
