@@ -148,8 +148,8 @@ export default function Home() {
             <span className="visual-plus plus-two">+</span>
           </div>
         </div>
-        <div className="shell scroll-hint">
-          <span /> role para explorar
+        <div className="shell scroll-hint" role="img" aria-label="Mais conteúdo abaixo">
+          <span aria-hidden="true" />
         </div>
       </section>
 
