@@ -114,34 +114,27 @@ export default function Home() {
             <div className="visual-grid" />
             <div className="portrait-frame">
               <Image
-                src="/images/profile.webp"
+                src="/images/foto-lateral.png"
                 alt="José Henrique usando camisa preta"
                 fill
                 priority
                 sizes="(max-width: 900px) 80vw, 42vw"
               />
             </div>
-            <div className="portrait-label">
-              <span className="label-line" />
-              <div>
-                <strong>José Henrique</strong>
-                <small>Desenvolvedor Full Stack</small>
-              </div>
-            </div>
-            <div className="code-card" aria-hidden="true">
+            <div className="code-card" role="group" aria-label="Exemplo de HTML">
               <span className="code-lights">
                 <i />
                 <i />
                 <i />
               </span>
               <code>
-                <em>&lt;section</em> <b>class</b>=
-                <strong>&quot;impacto&quot;</strong>
+                <em>&lt;div</em> <b>class</b>=
+                <strong>&quot;hero-impacto&quot;</strong>
                 <em>&gt;</em>
                 <br />
                 <span>presença digital</span>
                 <br />
-                <em>&lt;/section&gt;</em>
+                <em>&lt;/div&gt;</em>
               </code>
             </div>
             <span className="visual-plus plus-one">+</span>
@@ -260,18 +253,7 @@ export default function Home() {
         aria-labelledby="about-title"
       >
         <div className="shell about-grid">
-          <div className="about-image-wrap">
-            <div className="about-image">
-              <Image
-                src="/images/profile.webp"
-                alt="Retrato de José Henrique"
-                fill
-                sizes="(max-width: 900px) 80vw, 36vw"
-              />
-            </div>
-            <span className="about-code">&lt; / &gt;</span>
-            <span className="about-number">JH / 01</span>
-          </div>
+
           <div className="about-copy">
             <p className="eyebrow">
               <span className="eyebrow-dot" />

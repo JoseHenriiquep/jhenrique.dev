@@ -351,72 +351,57 @@ h1::after {
   right: 10%;
   width: 300px;
   height: 420px;
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid rgba(34, 211, 238, .5);
-  border-radius: 150px 150px 10px 10px;
-  background: #dbe4eb;
-  box-shadow: 0 0 0 10px rgba(34, 211, 238, .04), 0 0 70px rgba(34, 211, 238, .2);
+  border-radius: 28px 28px 12px 12px;
+  background: linear-gradient(145deg, rgba(34, 211, 238, .16), rgba(8, 15, 28, .58) 52%, rgba(8, 15, 28, .92));
+  box-shadow: 18px 22px 0 -10px rgba(163, 230, 53, .18), 0 26px 70px rgba(0, 0, 0, .32), 0 0 70px rgba(34, 211, 238, .2);
+  transform: perspective(1000px) rotateY(-8deg) rotateX(3deg) rotateZ(1deg);
+  transform-style: preserve-3d;
+}
+
+.portrait-frame::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 11% -12% 17% -10%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 211, 238, .46), rgba(34, 211, 238, .12) 54%, transparent 73%);
+  filter: blur(3px);
+  transform: translateZ(-24px) rotate(-8deg);
+  pointer-events: none;
 }
 
 .portrait-frame::after {
   content: "";
   position: absolute;
+  z-index: 2;
   inset: 0;
-  background: linear-gradient(180deg, transparent 56%, rgba(8, 15, 28, .54));
+  border-radius: inherit;
+  background: linear-gradient(180deg, transparent 50%, rgba(8, 15, 28, .52));
   pointer-events: none;
 }
 
 .portrait-frame img {
+  z-index: 1;
   object-fit: cover;
-  object-position: center 38%;
-}
-
-.portrait-label {
-  position: absolute;
-  z-index: 4;
-  right: 0;
-  bottom: 4px;
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  padding: 12px 14px;
-  border: 1px solid rgba(148, 163, 184, .17);
-  background: rgba(8, 15, 28, .75);
-  backdrop-filter: blur(10px);
-}
-
-.label-line {
-  width: 24px;
-  height: 2px;
-  background: var(--lime);
-}
-
-.portrait-label strong,
-.portrait-label small {
-  display: block;
-}
-
-.portrait-label strong {
-  font: 600 .82rem var(--font-display);
-}
-
-.portrait-label small {
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: .65rem;
+  object-position: center 40%;
+  filter: drop-shadow(18px 26px 16px rgba(0, 0, 0, .34));
+  transform: translateZ(26px) scale(1.08);
 }
 
 .code-card {
   position: absolute;
   z-index: 3;
-  left: 0;
-  bottom: 80px;
-  width: 210px;
+  left: -18px;
+  bottom: 68px;
+  width: 224px;
   padding: 14px 16px 18px;
   border: 1px solid rgba(34, 211, 238, .32);
   border-radius: 8px;
   background: rgba(8, 15, 28, .88);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, .2);
+  box-shadow: 16px 18px 0 -12px rgba(34, 211, 238, .12), 0 18px 45px rgba(0, 0, 0, .3);
+  transform: perspective(700px) rotateY(8deg) rotateX(2deg) translateZ(30px);
 }
 
 .code-lights {
@@ -1327,20 +1312,6 @@ h1::after {
     right: 4%;
     width: 220px;
     height: 320px;
-  }
-
-  .portrait-label {
-    right: -2px;
-    bottom: 5px;
-    padding: 9px 10px;
-  }
-
-  .portrait-label strong {
-    font-size: .7rem;
-  }
-
-  .portrait-label small {
-    font-size: .56rem;
   }
 
   .code-card {
