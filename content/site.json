@@ -73,6 +73,40 @@
     "description": "Atuante como desenvolvedor Full Stack, com especialidades em desenvolvimento web. Com mais de 3 anos de experiência, meu trabalho combina visão de produto, cuidado com a experiência e código consistente para criar soluções digitais funcionais e profissionais.",
     "note": "Disponível para conexões, ideias e novos projetos web."
   },
+  "skills": [
+    {
+      "name": "HTML5",
+      "tone": "cyan"
+    },
+    {
+      "name": "CSS3",
+      "tone": "lime"
+    },
+    {
+      "name": "JavaScript",
+      "tone": "cyan"
+    },
+    {
+      "name": "TypeScript",
+      "tone": "lime"
+    },
+    {
+      "name": "React",
+      "tone": "cyan"
+    },
+    {
+      "name": "Next.js",
+      "tone": "lime"
+    },
+    {
+      "name": "Angular",
+      "tone": "cyan"
+    },
+    {
+      "name": "Node.js",
+      "tone": "lime"
+    }
+  ],
   "process": [
     {
       "number": "01",

@@ -2,7 +2,28 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import {
+  SiAngular,
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiReact,
+  SiTypescript,
+} from "react-icons/si";
 import siteContent from "@/content/site.json";
+
+const skillIcons = {
+  HTML5: SiHtml5,
+  CSS3: SiCss3,
+  JavaScript: SiJavascript,
+  TypeScript: SiTypescript,
+  React: SiReact,
+  "Next.js": SiNextdotjs,
+  Angular: SiAngular,
+  "Node.js": SiNodedotjs,
+} as const;
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -91,17 +112,6 @@ export default function Home() {
                 {siteContent.hero.secondaryCta}
                 <span>↓</span>
               </a>
-            </div>
-            <div className="hero-signals" aria-label="Especialidades">
-              <span>
-                <b>01</b> React / Next.js
-              </span>
-              <span>
-                <b>02</b> Interfaces responsivas
-              </span>
-              <span>
-                <b>03</b> Arquitetura escalável
-              </span>
             </div>
           </div>
 
@@ -266,6 +276,35 @@ export default function Home() {
               {siteContent.about.note}
             </p>
           </div>
+          <aside className="stack-panel" aria-labelledby="skills-title">
+            <div className="stack-panel-header">
+              <div>
+                <p className="eyebrow">
+                  <span className="eyebrow-dot" /> SKILLS
+                </p>
+              </div>
+              <span className="stack-index">08 / 08</span>
+            </div>
+            <ul className="stack-logo-grid" aria-label="Tecnologias utilizadas">
+              {siteContent.skills.map((skill) => (
+                <li
+                  className="stack-logo"
+                  data-skill={skill.name}
+                  data-tone={skill.tone}
+                  key={skill.name}
+                  aria-label={skill.name}
+                >
+                  {(() => {
+                    const SkillIcon = skillIcons[skill.name as keyof typeof skillIcons];
+                    return <SkillIcon aria-hidden="true" focusable="false" />;
+                  })()}
+                </li>
+              ))}
+            </ul>
+            <p className="stack-footer">
+              <span /> desenvolvimento web / full stack
+            </p>
+          </aside>
         </div>
       </section>
 
