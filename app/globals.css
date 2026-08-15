@@ -1034,14 +1034,65 @@ h1::after {
   font: 500 1rem var(--font-display);
 }
 
-.faq-item button b {
+.faq-toggle {
+  position: relative;
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
   color: var(--cyan);
-  font-size: 1.5rem;
+  font-size: 0;
   font-weight: 400;
 }
 
+.faq-toggle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 14px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform-origin: center;
+  transition: transform .55s cubic-bezier(.22, 1, .36, 1), opacity .35s ease;
+}
+
+.faq-toggle span:first-child {
+  transform: translate(-50%, -50%);
+}
+
+.faq-toggle span:last-child {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-item.is-active .faq-toggle span:last-child {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
 .faq-answer {
-  padding: 0 40px 22px 0;
+  display: grid;
+  grid-template-rows: 0fr;
+  padding: 0 40px 0 0;
+  opacity: 0;
+  transition: grid-template-rows .62s cubic-bezier(.22, 1, .36, 1), padding-bottom .62s cubic-bezier(.22, 1, .36, 1), opacity .35s ease;
+}
+
+.faq-answer-inner {
+  min-height: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: transform .62s cubic-bezier(.22, 1, .36, 1);
+}
+
+.faq-item.is-active .faq-answer {
+  grid-template-rows: 1fr;
+  padding-bottom: 22px;
+  opacity: 1;
+}
+
+.faq-item.is-active .faq-answer-inner {
+  transform: translateY(0);
 }
 
 .faq-answer p {

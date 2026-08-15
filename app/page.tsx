@@ -379,14 +379,19 @@ export default function Home() {
                   aria-controls={`faq-answer-${index}`}
                 >
                   <span>{item.question}</span>
-                  <b>{activeFaq === index ? "−" : "+"}</b>
+                  <b className="faq-toggle" aria-hidden="true">
+                    <span />
+                    <span />
+                  </b>
                 </button>
                 <div
                   className="faq-answer"
                   id={`faq-answer-${index}`}
-                  hidden={activeFaq !== index}
+                  aria-hidden={activeFaq !== index}
                 >
-                  <p>{item.answer}</p>
+                  <div className="faq-answer-inner">
+                    <p>{item.answer}</p>
+                  </div>
                 </div>
               </div>
             ))}
