@@ -124,7 +124,16 @@ button {
   border-radius: 6px;
   color: var(--white) !important;
   background: rgba(34, 211, 238, .08);
+  transition: background 1s ease, border-color 1s ease, box-shadow 1s ease;
 }
+
+.nav-cta:hover,
+.nav-cta:focus-visible {
+  border-color: var(--cyan);
+  background: rgba(34, 211, 238, .18);
+  box-shadow: 0 10px 24px rgba(34, 211, 238, .14);
+}
+
 
 .nav-cta span,
 .button span {
