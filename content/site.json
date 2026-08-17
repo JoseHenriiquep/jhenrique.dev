@@ -154,6 +154,29 @@
   "contact": {
     "eyebrow": "VAMOS CONVERSAR",
     "title": "Uma boa presença digital começa com uma boa conversa.",
-    "description": "Os canais de contato serão adicionados em breve. Enquanto isso, a estrutura do site já está pronta para receber seus dados e novos projetos."
+    "description": "Escolha o canal que preferir e me conte sobre o seu projeto. Será um prazer conversar.",
+    "status": "Disponível para novos projetos",
+    "whatsapp": "5581920020156",
+    "email": "dev.jhenrique@gmail.com",
+    "socials": [
+      {
+        "name": "Instagram",
+        "handle": "@jhenrique.dev",
+        "href": "https://www.instagram.com/jhenrique.dev/",
+        "tone": "cyan"
+      },
+      {
+        "name": "LinkedIn",
+        "handle": "/in/josehenriiquep",
+        "href": "https://www.linkedin.com/in/josehenriiquep/",
+        "tone": "lime"
+      },
+      {
+        "name": "GitHub",
+        "handle": "@JoseHenriiquep",
+        "href": "https://github.com/JoseHenriiquep",
+        "tone": "cyan"
+      }
+    ]
   }
 }

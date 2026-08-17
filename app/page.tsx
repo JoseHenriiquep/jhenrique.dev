@@ -2,10 +2,15 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import {
   SiAngular,
   SiCss3,
+  SiGithub,
   SiHtml5,
+  SiInstagram,
+  SiLinkedin,
   SiJavascript,
   SiNextdotjs,
   SiNodedotjs,
@@ -25,9 +30,15 @@ const skillIcons = {
   "Node.js": SiNodedotjs,
 } as const;
 
+const socialIcons = {
+  Instagram: SiInstagram,
+  LinkedIn: SiLinkedin,
+  GitHub: SiGithub,
+} as const;
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeFaq, setActiveFaq] = useState<number | null>(0);
+  const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -414,43 +425,65 @@ export default function Home() {
             <p>{siteContent.contact.description}</p>
             <div className="contact-status">
               <span className="status-dot" />
-              Canais de contato em configuração
+              {siteContent.contact.status}
             </div>
           </div>
-          <form
-            className="contact-form"
-            onSubmit={(event) => event.preventDefault()}
-          >
-            <div className="form-header">
-              <span>FORMULÁRIO DE CONTATO</span>
-              <span className="form-lock">EM BREVE</span>
+          <div className="contact-links" aria-label="Canais de contato">
+            <a
+              className="whatsapp-card"
+              href={`https://wa.me/${siteContent.contact.whatsapp}?text=${encodeURIComponent("Olá, José! Vi seu site e gostaria de conversar sobre um projeto.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="whatsapp-icon" aria-hidden="true">
+                <FaWhatsapp />
+              </span>
+              <span className="whatsapp-copy">
+                <small>CONVERSA DIRETA</small>
+                <strong>Falar pelo WhatsApp</strong>
+                <span>Responder pessoalmente por lá.</span>
+              </span>
+              <span className="contact-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+            <a
+              className="email-link"
+              href={`mailto:${siteContent.contact.email}`}
+            >
+              <span className="email-icon" aria-hidden="true">
+                <MdEmail />
+              </span>
+              <span className="email-copy">
+                <small>OU ENVIE UM E-MAIL</small>
+                <strong>{siteContent.contact.email}</strong>
+              </span>
+              <span className="contact-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+            <div className="social-links" aria-label="Redes sociais">
+              {siteContent.contact.socials.map((social) => {
+                const SocialIcon =
+                  socialIcons[social.name as keyof typeof socialIcons];
+
+                return (
+                  <a
+                    className="social-link"
+                    data-tone={social.tone}
+                    href={social.href}
+                    key={social.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <SocialIcon aria-hidden="true" focusable="false" />
+                    <span>{social.name}</span>
+                    <small>{social.handle}</small>
+                  </a>
+                );
+              })}
             </div>
-            <label>
-              Nome
-              <input type="text" name="name" placeholder="Seu nome" disabled />
-            </label>
-            <label>
-              E-mail
-              <input
-                type="email"
-                name="email"
-                placeholder="seu@email.com"
-                disabled
-              />
-            </label>
-            <label>
-              Mensagem
-              <textarea
-                name="message"
-                rows={4}
-                placeholder="Conte um pouco sobre sua ideia"
-                disabled
-              />
-            </label>
-            <button className="button button-primary" type="submit" disabled>
-              Enviar mensagem <span>↗</span>
-            </button>
-          </form>
+          </div>
         </div>
       </section>
 
