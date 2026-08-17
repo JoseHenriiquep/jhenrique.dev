@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -17,7 +16,7 @@ import {
   SiReact,
   SiTypescript,
 } from "react-icons/si";
-import siteContent from "@/content/site.json";
+import siteContent from "../content/site.json";
 
 const skillIcons = {
   HTML5: SiHtml5,
@@ -53,12 +52,11 @@ export default function Home() {
             aria-label="jhenrique.dev — início"
           >
             <span className="brand-mark" aria-hidden="true">
-              <Image
+              <img
                 src="/images/logo-JH.png"
                 alt=""
                 width={170}
                 height={100}
-                priority
               />
             </span>
             <span className="brand-name">
@@ -134,11 +132,10 @@ export default function Home() {
             <div className="visual-orbit orbit-two" />
             <div className="visual-grid" />
             <div className="portrait-frame">
-              <Image
+              <img
                 src="/images/foto-lateral.png"
                 alt="José Henrique usando camisa preta"
-                fill
-                priority
+                loading="eager"
                 sizes="(max-width: 900px) 80vw, 42vw"
               />
             </div>
@@ -491,7 +488,7 @@ export default function Home() {
         <div className="shell footer-inner">
           <a className="brand" href="#inicio">
             <span className="brand-mark" aria-hidden="true">
-              <Image src="/images/logo-JH.png" alt="" width={170} height={100} />
+              <img src="/images/logo-JH.png" alt="" width={170} height={100} />
             </span>
             <span className="brand-name">
               jhenrique<span>.dev</span>
