@@ -1,0 +1,49 @@
+.link {
+  display: flex;
+  min-height: 120px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--white);
+  background: rgba(8, 15, 28, 0.52);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(34, 211, 238, 0.5);
+  background: rgba(13, 28, 48, 0.72);
+}
+
+.link svg {
+  width: 23px;
+  height: 23px;
+  color: var(--cyan);
+}
+
+.link[data-tone="lime"] svg {
+  color: var(--lime);
+}
+
+.link span {
+  font: 600 0.94rem var(--font-display);
+}
+
+.link small {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.66rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .link {
+    min-height: 105px;
+  }
+}
+

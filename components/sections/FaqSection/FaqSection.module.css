@@ -1,0 +1,45 @@
+.section {
+  background: var(--navy);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 100px;
+}
+
+.grid h2 {
+  margin-bottom: 0;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 0.98;
+  font-weight: 600;
+}
+
+.grid h2 span {
+  color: var(--cyan);
+}
+
+.intro {
+  max-width: 430px;
+  margin: 30px 0 7px;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.list {
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 1020px) {
+  .grid {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 820px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
